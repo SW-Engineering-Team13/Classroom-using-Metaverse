@@ -19,7 +19,10 @@ MonoBehaviour:
   sourceCsScript: {fileID: 11500000, guid: 9e040ca3038bcd240bbee0eb7be03dc4, type: 3}
   behaviourSyncMode: 0
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
-  compileErrors: []
+  compileErrors:
+  - '[<color=#FF00FF>UdonSharp</color>] Assets/Classroom/Classroom_UdonProgramSources/StudentData.cs(1,0):
+    System.Exception: No UdonSharpBehaviour class found in script file, you must
+    define an UdonSharpBehaviour class in a script referenced by an UdonSharpProgramAsset'
   hasInteractEvent: 0
   serializationData:
     SerializedFormat: 2
@@ -67,7 +70,7 @@ MonoBehaviour:
       Data: 
     - Name: declarationType
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: syncMode
       Entry: 3
       Data: 0
@@ -130,7 +133,7 @@ MonoBehaviour:
       Data: 
     - Name: declarationType
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: syncMode
       Entry: 3
       Data: 0
@@ -187,7 +190,7 @@ MonoBehaviour:
       Data: 8
     - Name: declarationType
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: syncMode
       Entry: 3
       Data: 0
@@ -244,7 +247,7 @@ MonoBehaviour:
       Data: 4
     - Name: declarationType
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: syncMode
       Entry: 3
       Data: 0
