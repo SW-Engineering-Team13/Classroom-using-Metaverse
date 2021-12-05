@@ -11,6 +11,7 @@ public class camswitch : UdonSharpBehaviour
     public GameObject cam1;
     public GameObject cam2;
 
+    
     void Update()
     {
         if(Input.GetKey("1")){

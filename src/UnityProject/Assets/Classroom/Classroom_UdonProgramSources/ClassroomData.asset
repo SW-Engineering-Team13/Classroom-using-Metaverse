@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
-  m_Name: AttendanceCheck
+  m_Name: ClassroomData
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 75df84319980bc64b8740a5361affabc,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: b5c10645b66548b4e96f5b6cee0b6edf,
     type: 2}
   udonAssembly: 
   assemblyError: 
-  sourceCsScript: {fileID: 11500000, guid: 1c27f9d74a2a21c43961c7f72eb9632c, type: 3}
+  sourceCsScript: {fileID: 11500000, guid: bfaabf0600aafe740ac58a8aed5470e2, type: 3}
   behaviourSyncMode: 0
   behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
   compileErrors: []
@@ -24,9 +24,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11500000, guid: bfaabf0600aafe740ac58a8aed5470e2, type: 3}
-    - {fileID: 11500000, guid: 56972690be2ba804aa5b32c441dc0851, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -45,13 +43,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 3
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
       Entry: 1
-      Data: classroomData
+      Data: classid
     - Name: $v
       Entry: 7
       Data: 2|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
@@ -63,7 +61,7 @@ MonoBehaviour:
       Data: 4|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: ClassroomData, Assembly-CSharp
+      Data: System.Int32, mscorlib
     - Name: 
       Entry: 8
       Data: 
@@ -75,13 +73,13 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: VRCUdonUdonBehaviour
+      Data: SystemInt32
     - Name: symbolOriginalName
       Entry: 1
-      Data: classroomData
+      Data: classid
     - Name: symbolUniqueName
       Entry: 1
-      Data: classroomData
+      Data: classid
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -101,8 +99,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: userBehaviourSource
-      Entry: 10
-      Data: 0
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -114,7 +112,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: studentData
+      Data: studentidArr
     - Name: $v
       Entry: 7
       Data: 6|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
@@ -126,7 +124,7 @@ MonoBehaviour:
       Data: 8|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: StudentData, Assembly-CSharp
+      Data: System.Int32[], mscorlib
     - Name: 
       Entry: 8
       Data: 
@@ -138,13 +136,13 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: VRCUdonUdonBehaviour
+      Data: SystemInt32Array
     - Name: symbolOriginalName
       Entry: 1
-      Data: studentData
+      Data: studentidArr
     - Name: symbolUniqueName
       Entry: 1
-      Data: studentData
+      Data: studentidArr
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -164,8 +162,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: userBehaviourSource
-      Entry: 10
-      Data: 1
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -177,7 +175,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: currentTime
+      Data: classtime
     - Name: $v
       Entry: 7
       Data: 10|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
@@ -204,10 +202,10 @@ MonoBehaviour:
       Data: SystemDateTime
     - Name: symbolOriginalName
       Entry: 1
-      Data: currentTime
+      Data: classtime
     - Name: symbolUniqueName
       Entry: 1
-      Data: currentTime
+      Data: classtime
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -217,69 +215,6 @@ MonoBehaviour:
     - Name: fieldAttributes
       Entry: 7
       Data: 13|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: userBehaviourSource
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
-      Data: isLate
-    - Name: $v
-      Entry: 7
-      Data: 14|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
-    - Name: fieldSymbol
-      Entry: 7
-      Data: 15|UdonSharp.Compiler.SymbolDefinition, UdonSharp.Editor
-    - Name: internalType
-      Entry: 7
-      Data: 16|System.RuntimeType, mscorlib
-    - Name: 
-      Entry: 1
-      Data: System.Boolean, mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: declarationType
-      Entry: 3
-      Data: 1
-    - Name: syncMode
-      Entry: 3
-      Data: 0
-    - Name: symbolResolvedTypeName
-      Entry: 1
-      Data: SystemBoolean
-    - Name: symbolOriginalName
-      Entry: 1
-      Data: isLate
-    - Name: symbolUniqueName
-      Entry: 1
-      Data: isLate
-    - Name: symbolDefaultValue
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: fieldAttributes
-      Entry: 7
-      Data: 17|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0

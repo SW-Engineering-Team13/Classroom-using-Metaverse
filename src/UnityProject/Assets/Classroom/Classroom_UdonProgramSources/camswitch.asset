@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: camswitch
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: dcca317e3c35b124080fba9fdac29edc,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: fd0add4e4c653bd4984e9ebe729d256d,
     type: 2}
   udonAssembly: 
   assemblyError: 
