@@ -7,7 +7,7 @@ using UnityEngine;
 public class input : MonoBehaviour
 {
 
-    public InputField mainInputField1; 
+    public InputField InputField1; 
     // Checks if there is anything entered into the input field. 
     void LockInput(InputField input) { 
         if (input.text.Length > 0) { 
@@ -19,7 +19,7 @@ public class input : MonoBehaviour
     void Start()
     {
         //Use onEndEdit 
-        mainInputField.onEndEdit.AddListener(delegate{LockInput(mainInputField1);});
+        InputField.onEndEdit.AddListener(delegate{LockInput(mainInputField1);});
         
         //Use onSubmit 
         mainInputField.onSubmit.AddListener(delegate{LockInput(mainInputField1);});

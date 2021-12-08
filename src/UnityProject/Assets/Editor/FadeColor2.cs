@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FadeColor : MonoBehaviour
+public class FadeColor2 : MonoBehaviour
 {
-    SpriteRenderer sr;
+    // Start is called before the first frame update
+    public SpriteRenderer sr;
     public GameObject go;
     // Start is called before the first frame update
     void Start()
@@ -15,21 +16,21 @@ public class FadeColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(input.GetKeyDown("r"))
+        if(Input.GetKeyDown("r"))
             sr.material.color = Color.red;
-        if(input.GetKeyDown("g"))
+        if(Input.GetKeyDown("g"))
             sr.material.color = Color.green;
-        if(input.GetKeyDown("b"))
+        if(Input.GetKeyDown("b"))
             sr.material.color = Color.blue;   
-        if(input.GetKeyDown("m"))
+        if(Input.GetKeyDown("m"))
             sr.material.color = Color.magenta;
-        if(input.GetKeyDown("y"))
+        if(Input.GetKeyDown("y"))
             sr.material.color = Color.yellow;
-        if(input.GetKeyDown("c"))
+        if(Input.GetKeyDown("c"))
             sr.material.color = Color.cyan;
-        if(input.GetKeyDown("k"))
+        if(Input.GetKeyDown("k"))
             sr.material.color = Color.black;   
-        if(input.GetKeyDown("e"))
+        if(Input.GetKeyDown("e"))
             sr.material.color = Color.gray;                   
     }
 }

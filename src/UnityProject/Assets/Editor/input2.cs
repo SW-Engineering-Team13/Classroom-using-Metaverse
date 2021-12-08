@@ -5,6 +5,7 @@ using UnityEngine;
 //https://geukggom.tistory.com/143
 public class input2 : MonoBehaviour
 {
+    /*
     public InputField myInputField;
     // Start is called before the first frame update
     void Start()
@@ -17,4 +18,5 @@ public class input2 : MonoBehaviour
     {
          Debug.Log(text + " - 글자 입력 중");
     }
+    */
 }
