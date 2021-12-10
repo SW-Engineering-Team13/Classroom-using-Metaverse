@@ -1,0 +1,274 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
+  m_Name: Screen Udon Graph Program Asset
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 195a7d78c94e0a748b6d2fa275ebf9a1,
+    type: 2}
+  udonAssembly: ".data_start\r\n\r\n    \r\n    __Boolean_0: %SystemBoolean, null\r\n   
+    __instance_0: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    __instance_1:
+    %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    __instance_2: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer,
+    null\r\n    __instance_3: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n   
+    __instance_4: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    __url_0:
+    %VRCSDKBaseVRCUrl, null\r\n    __instance_5: %VRCSDK3ComponentsVRCUrlInputField,
+    null\r\n    __instance_6: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n   
+    VideoPlayer: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    URLfield:
+    %VRCSDK3ComponentsVRCUrlInputField, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n   
+    .export _custom\r\n    \r\n    _custom:\r\n    \r\n        PUSH, VideoPlayer\r\n       
+    PUSH, __instance_0\r\n        COPY\r\n        PUSH, __instance_0\r\n        PUSH,
+    __Boolean_0\r\n        EXTERN, \"VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__get_IsPlaying__SystemBoolean\"\r\n       
+    PUSH, __Boolean_0\r\n        JUMP_IF_FALSE, 0x00000068\r\n        PUSH, VideoPlayer\r\n       
+    PUSH, __instance_1\r\n        COPY\r\n        PUSH, __instance_1\r\n        EXTERN,
+    \"VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__Pause__SystemVoid\"\r\n       
+    JUMP, 0x0000008C\r\n        PUSH, VideoPlayer\r\n        PUSH, __instance_2\r\n       
+    COPY\r\n        PUSH, __instance_2\r\n        EXTERN, \"VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__Play__SystemVoid\"\r\n       
+    JUMP, 0xFFFFFFFC\r\n    \r\n    .export LoadURL\r\n    \r\n    LoadURL:\r\n   
+    \r\n        PUSH, VideoPlayer\r\n        PUSH, __instance_3\r\n        COPY\r\n       
+    PUSH, __instance_3\r\n        EXTERN, \"VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__Stop__SystemVoid\"\r\n       
+    PUSH, VideoPlayer\r\n        PUSH, __instance_4\r\n        COPY\r\n        PUSH,
+    URLfield\r\n        PUSH, __instance_5\r\n        COPY\r\n        PUSH, __instance_5\r\n       
+    PUSH, __url_0\r\n        EXTERN, \"VRCSDK3ComponentsVRCUrlInputField.__GetUrl__VRCSDKBaseVRCUrl\"\r\n       
+    PUSH, __instance_4\r\n        PUSH, __url_0\r\n        EXTERN, \"VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__LoadURL__VRCSDKBaseVRCUrl__SystemVoid\"\r\n       
+    JUMP, 0xFFFFFFFC\r\n    \r\n    .export _onVideoReady\r\n    \r\n    _onVideoReady:\r\n   
+    \r\n        PUSH, VideoPlayer\r\n        PUSH, __instance_6\r\n        COPY\r\n       
+    PUSH, __instance_6\r\n        EXTERN, \"VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__Play__SystemVoid\"\r\n       
+    JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+  assemblyError: 
+  graphData:
+    name: 
+    description: 
+    nodes:
+    - fullName: Variable_VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer
+      uid: 1dcb1704-24fe-4cb1-8aae-ddcec3946ca4
+      position: {x: 0, y: 0}
+      nodeUIDs:
+      - 
+      - 
+      - 
+      - 
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|VideoPlayer
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
+    - fullName: Variable_VRCSDK3ComponentsVRCUrlInputField
+      uid: f93a07d1-5c6a-423c-ae60-77280acf643e
+      position: {x: 0, y: 0}
+      nodeUIDs:
+      - 
+      - 
+      - 
+      - 
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|URLfield
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
+    - fullName: Event_Custom
+      uid: 8ce5c2b2-e9f2-48a6-82f8-e9201bd660fe
+      position: {x: 317.1451, y: -77.93638}
+      nodeUIDs:
+      - 
+      flowUIDs:
+      - 8e4b6476-287d-4063-b99c-27633ba0ba7e
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Branch
+      uid: 8e4b6476-287d-4063-b99c-27633ba0ba7e
+      position: {x: 629.1137, y: -77.96752}
+      nodeUIDs:
+      - a782fc4f-dbfc-43f6-ac27-cd08b6d05752|0
+      flowUIDs:
+      - 1f0c7d89-cb2b-4711-999f-fdcb9c950394
+      - b3a4be62-656c-4eb8-921b-95a55efc9bbd
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+    - fullName: VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__get_IsPlaying__SystemBoolean
+      uid: a782fc4f-dbfc-43f6-ac27-cd08b6d05752
+      position: {x: 422.43536, y: 57.749496}
+      nodeUIDs:
+      - 937df3f8-1238-499a-9496-692a5384638c|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Get_Variable
+      uid: 937df3f8-1238-499a-9496-692a5384638c
+      position: {x: 147.78926, y: 124.12327}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|1dcb1704-24fe-4cb1-8aae-ddcec3946ca4
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Get_Variable
+      uid: 962100a1-bf7f-46c8-a533-c58395d0edf7
+      position: {x: 853.58124, y: 33.68695}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|1dcb1704-24fe-4cb1-8aae-ddcec3946ca4
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__Pause__SystemVoid
+      uid: 1f0c7d89-cb2b-4711-999f-fdcb9c950394
+      position: {x: 1185.651, y: -125.5743}
+      nodeUIDs:
+      - 962100a1-bf7f-46c8-a533-c58395d0edf7|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__Play__SystemVoid
+      uid: b3a4be62-656c-4eb8-921b-95a55efc9bbd
+      position: {x: 1203.2775, y: 185.30408}
+      nodeUIDs:
+      - 962100a1-bf7f-46c8-a533-c58395d0edf7|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Event_Custom
+      uid: 9ad78010-3905-4486-9300-f0047aa7161c
+      position: {x: 307.47757, y: 399.23434}
+      nodeUIDs:
+      - 
+      flowUIDs:
+      - 61e9ec74-2a73-486b-a87e-07b35c5e68b3
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|LoadURL
+    - fullName: Get_Variable
+      uid: 7cc06791-cc7f-468b-bbac-dd28c2ee65b3
+      position: {x: 533.0971, y: 492.86993}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|1dcb1704-24fe-4cb1-8aae-ddcec3946ca4
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__Stop__SystemVoid
+      uid: 61e9ec74-2a73-486b-a87e-07b35c5e68b3
+      position: {x: 783.0715, y: 356.2788}
+      nodeUIDs:
+      - 7cc06791-cc7f-468b-bbac-dd28c2ee65b3|0
+      flowUIDs:
+      - f407cca1-feee-4a62-b45d-fe849a5225bb
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Get_Variable
+      uid: b68a7536-196f-4c6f-a038-a12696afee48
+      position: {x: 866.30664, y: 530.50195}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|1dcb1704-24fe-4cb1-8aae-ddcec3946ca4
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__LoadURL__VRCSDKBaseVRCUrl__SystemVoid
+      uid: f407cca1-feee-4a62-b45d-fe849a5225bb
+      position: {x: 1205.293, y: 358.05963}
+      nodeUIDs:
+      - b68a7536-196f-4c6f-a038-a12696afee48|0
+      - 7ec26a66-155b-48aa-9b6b-a9fa0d18d529|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Get_Variable
+      uid: 848d15f9-cd28-474b-becd-c3806ad003c1
+      position: {x: 905.98517, y: 646.4327}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|f93a07d1-5c6a-423c-ae60-77280acf643e
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: VRCSDK3ComponentsVRCUrlInputField.__GetUrl__VRCSDKBaseVRCUrl
+      uid: 7ec26a66-155b-48aa-9b6b-a9fa0d18d529
+      position: {x: 1201.8165, y: 580.60126}
+      nodeUIDs:
+      - 848d15f9-cd28-474b-becd-c3806ad003c1|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Event_OnVideoReady
+      uid: 0cbbf2f0-40bc-47b8-a02c-92e54721a35c
+      position: {x: 322.35596, y: 751.9085}
+      nodeUIDs: []
+      flowUIDs:
+      - 6d1e49c5-5ea1-42d8-8f10-830090cd995d
+      nodeValues: []
+    - fullName: Get_Variable
+      uid: 3ab7d464-6c94-4bfd-b953-3a67bcf80db6
+      position: {x: 509.33603, y: 884.9771}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|1dcb1704-24fe-4cb1-8aae-ddcec3946ca4
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__Play__SystemVoid
+      uid: 6d1e49c5-5ea1-42d8-8f10-830090cd995d
+      position: {x: 672.04095, y: 709.0576}
+      nodeUIDs:
+      - 3ab7d464-6c94-4bfd-b953-3a67bcf80db6|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    updateOrder: 0
+  graphElementData: []
+  viewTransform:
+    position: {x: 136.8, y: -76.8}
+    scale: 0.43232757
+  version: 1.0.0
+  showAssembly: 0

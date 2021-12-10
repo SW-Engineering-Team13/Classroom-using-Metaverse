@@ -155,13 +155,13 @@ MonoBehaviour:
     jsonData: '{"uid":"b3530459-83f3-44f3-90de-f90d9b0932d2","layout":{"serializedVersion":"2","x":1660.0,"y":180.0,"width":1081.0,"height":324.0},"containedElements":["778c57e2-05e0-41ea-b330-113a1be1ef31","f2fd1aff-eac6-4bad-b19b-ac78d332c50c","8909ba7d-ff67-48cc-be25-e86ec7011cc6","9707b710-a947-41ff-b26f-8a582d68a6eb"],"title":"Log
       Player Name When They Exit","layer":0,"elementTypeColor":{"r":0.0,"g":0.0,"b":0.0,"a":0.0}}'
   - type: 5
-    uid: 5d0f4cc4-6854-454f-bb77-8e1bb8842672
+    uid: 9d456baf-01fc-4f57-881c-7b1808938e26
     jsonData: '{"visible":true,"layout":{"serializedVersion":"2","x":10.0,"y":130.0,"width":200.0,"height":150.0}}'
   - type: 4
     uid: 660ed7e9-fdef-48a0-be18-1e45b935b733
     jsonData: '{"visible":true,"layout":{"serializedVersion":"2","x":10.0,"y":20.0,"width":0.0,"height":0.0}}'
   viewTransform:
-    position: {x: -349.61578, y: 322.0548}
-    scale: 0.57175326
+    position: {x: -613.6, y: 64}
+    scale: 0.49717674
   version: 1.0.0
   showAssembly: 0
