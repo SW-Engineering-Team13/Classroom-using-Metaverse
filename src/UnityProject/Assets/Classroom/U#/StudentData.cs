@@ -10,7 +10,7 @@ public class StudentData : UdonSharpBehaviour
     public string[] nickname;
     public string[] name;
     public string[] enroledclass;
-    private void Start()
+    public void initialize()
     {
         studentid = new int[1];
         nickname = new string[1];
@@ -22,4 +22,19 @@ public class StudentData : UdonSharpBehaviour
         name[0] = "Kangmin Lee";
         enroledclass[0] = "SWE3002_41";
     }
+
+    public string getNameById(int id){
+        int len = studentid.Length;
+        for(int i = 0; i < len; i++){
+            if(studentid[i] == id){
+                return name[i];
+            }
+
+        }
+
+        return "ERROR";
+    }
+
+
+    
 }
