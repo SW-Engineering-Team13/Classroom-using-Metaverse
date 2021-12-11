@@ -10,6 +10,7 @@ public class AutoTeleportSystem : UdonSharpBehaviour
 {
     public ClassroomData classroomData;
     public GameObject[] gameObjectsArr;
+    public GameObject target;
 
     Boolean flag = true; //update tickrate controll
     int flagminute = -1;
@@ -37,11 +38,11 @@ public class AutoTeleportSystem : UdonSharpBehaviour
     }
 
     public void teleport(){
-        float x1 = gameObjectsArr[0].transform.localPosition.x;
-        float x2 = gameObjectsArr[0].transform.localPosition.x;
+        float x1 = gameObjectsArr[0].transform.position.x;
+        float x2 = gameObjectsArr[0].transform.position.x;
 
-        float z1 = gameObjectsArr[0].transform.localPosition.z;
-        float z2 = gameObjectsArr[0].transform.localPosition.z;
+        float z1 = gameObjectsArr[0].transform.position.z;
+        float z2 = gameObjectsArr[0].transform.position.z;
 
         Vector3 pos = Networking.LocalPlayer.GetPosition();
 
@@ -50,7 +51,8 @@ public class AutoTeleportSystem : UdonSharpBehaviour
             return;
         }else{
             Debug.Log("Teleported!");
-            Networking.LocalPlayer.TeleportTo(new Vector3( (float)8.9, (float)0.75, (float)-12.4), new Quaternion(0, 0, 0, 0));
+            
+            Networking.LocalPlayer.TeleportTo(new Vector3( target.transform.position.x, target.transform.position.y, target.transform.position.z), new Quaternion(0, 0, 0, 0));
         }
         
         

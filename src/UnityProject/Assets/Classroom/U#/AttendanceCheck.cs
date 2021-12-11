@@ -31,6 +31,7 @@ public class AttendanceCheck : UdonSharpBehaviour
         }
         else
         {
+
             BoxCollider temp = (BoxCollider)this.gameObject.GetComponent(typeof(BoxCollider));
             temp.enabled = true;
         }
@@ -51,7 +52,9 @@ public class AttendanceCheck : UdonSharpBehaviour
         {
             activateCollider(true);
             Debug.Log("attendance checked(late)");
-        }else if ( hour == classroomData.classStartTime.AddMinutes(-10).Hour && minute == classroomData.classStartTime.AddMinutes(-10).Minute && flag ){
+        }
+        else if (hour == classroomData.classStartTime.AddMinutes(-10).Hour && minute == classroomData.classStartTime.AddMinutes(-10).Minute && flag)
+        {
             resetPanel();
         }
         flag = false; //매 분마다 if 문 한번만 진입
@@ -70,44 +73,40 @@ public class AttendanceCheck : UdonSharpBehaviour
 
         int len = studentData.studentid.Length;
         /* 닉네임 기반으로 학번 체크 */
-        for (int i = 0; i < len; i++)
+
+        int id = studentData.getIdByNickname(player.displayName);
+        /* 일치하는 학번 발견시 */
+        if (id != -1)
         {
-            /* 일치하는 학번 발견시 */
-            if (studentData.nickname[i].Equals(player.displayName))
+            int attendancenum = classroomData.isEnrolled(id);
+
+            if (isLate)
             {
-                /* 강의실 정보에서 수강중인 학번 체크 */
-                for (int j = 0; j < classroomData.studentidArr.Length; j++)
+                GameObject gtemp = panelList.transform.GetChild(attendancenum).gameObject;
+                Image itemp = (Image)gtemp.GetComponentInChildren(typeof(Image));
+
+                if (itemp.color == Color.red)
                 {
-                    /* 수강중인 학생 발견시 */
-                    if (classroomData.studentidArr[j] == studentData.studentid[i])
-                    {
-                        /*지각출석*/
-                        if (isLate)
-                        {
-                            GameObject gtemp = panelList.transform.GetChild(j).gameObject;
-                            Image itemp = (Image)gtemp.GetComponentInChildren(typeof(Image));
-                           
-                            if(itemp.color == Color.red){
-                                itemp.color = Color.yellow;
-                            }
-
-                            /*정상출석*/
-                        }
-                        else
-                        {
-                            GameObject gtemp = panelList.transform.GetChild(j).gameObject;
-                            Image itemp = (Image)gtemp.GetComponentInChildren(typeof(Image));
-
-                            if(itemp.color == Color.red){
-                                itemp.color = Color.green;
-                            }
-
-
-                        }
-                    }
+                    itemp.color = Color.yellow;
                 }
+
+                /*정상출석*/
+            }
+            else
+            {
+                GameObject gtemp = panelList.transform.GetChild(attendancenum).gameObject;
+                Image itemp = (Image)gtemp.GetComponentInChildren(typeof(Image));
+
+                if (itemp.color == Color.red)
+                {
+                    itemp.color = Color.green;
+                }
+
+
             }
         }
+
+
         //deactivate collider
         BoxCollider temp = (BoxCollider)this.gameObject.GetComponent(typeof(BoxCollider));
         temp.enabled = false;

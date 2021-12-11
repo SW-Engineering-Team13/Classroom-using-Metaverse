@@ -23,6 +23,19 @@ public class StudentData : UdonSharpBehaviour
         enroledclass[0] = "SWE3002_41";
     }
 
+    public int getIdByNickname(string nickname){
+        int len = studentid.Length;
+        for(int i = 0; i < len; i++){
+            if(this.nickname[i].Equals(nickname)){
+                return studentid[i];
+            }
+
+        }
+
+        return -1;
+
+    }
+
     public string getNameById(int id){
         int len = studentid.Length;
         for(int i = 0; i < len; i++){
