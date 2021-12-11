@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FadeColor2 : MonoBehaviour
+public class FadeColor : MonoBehaviour
 {
     // Start is called before the first frame update
     public SpriteRenderer sr;
