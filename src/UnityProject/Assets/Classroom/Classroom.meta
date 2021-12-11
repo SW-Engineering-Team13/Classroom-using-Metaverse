@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:src/UnityProject/Assets/Classroom/Classroom.meta
 guid: f5df4b703761eac4bbcae4e7ec27ff6c
+=======
+guid: b5cb093c95f26114ea81c4814aced91a
+>>>>>>> feat/hub:src/UnityProject/Assets/FurnishedCabin/Documentation.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
