@@ -1,0 +1,126 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
+  m_Name: QuestionSystem Udon Graph Program Asset
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: c7fdd436174663c4c93d49b651bf3822,
+    type: 2}
+  udonAssembly: ".data_start\r\n\r\n    .export audio\r\n    .export audiosource\r\n   
+    \r\n    __instance_0: %UnityEngineAudioSource, null\r\n    __clip_0: %UnityEngineAudioClip,
+    null\r\n    audio: %UnityEngineAudioClip, null\r\n    audiosource: %UnityEngineAudioSource,
+    null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n    .export questionbell\r\n   
+    \r\n    questionbell:\r\n    \r\n        PUSH, audiosource\r\n        PUSH, __instance_0\r\n       
+    COPY\r\n        PUSH, audio\r\n        PUSH, __clip_0\r\n        COPY\r\n       
+    PUSH, __instance_0\r\n        PUSH, __clip_0\r\n        EXTERN, \"UnityEngineAudioSource.__PlayOneShot__UnityEngineAudioClip__SystemVoid\"\r\n       
+    JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+  assemblyError: 
+  graphData:
+    name: 
+    description: 
+    nodes:
+    - fullName: Variable_UnityEngineAudioClip
+      uid: b0fa33ae-c82c-4c87-9205-31a4248c9b11
+      position: {x: -189.27138, y: 359.23877}
+      nodeUIDs:
+      - 
+      - 
+      - 
+      - 
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|audio
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|True
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
+    - fullName: Variable_UnityEngineAudioSource
+      uid: 95cbc7df-6629-46e2-a849-32ae480e9ad2
+      position: {x: -189.27138, y: 359.23877}
+      nodeUIDs:
+      - 
+      - 
+      - 
+      - 
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|audiosource
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|True
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
+    - fullName: UnityEngineAudioSource.__PlayOneShot__UnityEngineAudioClip__SystemVoid
+      uid: 23a6bc36-a87c-48b8-aa5e-e6af39749c7c
+      position: {x: 840.5805, y: -12.974581}
+      nodeUIDs:
+      - d321138b-7d52-4711-a81f-831cf2b5bab3
+      - 22b1f9e4-b782-4ffb-b01d-c2d2f77457c9
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Get_Variable
+      uid: 22b1f9e4-b782-4ffb-b01d-c2d2f77457c9
+      position: {x: 568.6119, y: 183.1305}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|b0fa33ae-c82c-4c87-9205-31a4248c9b11
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Get_Variable
+      uid: d321138b-7d52-4711-a81f-831cf2b5bab3
+      position: {x: 519.9619, y: 70.00552}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|95cbc7df-6629-46e2-a849-32ae480e9ad2
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Event_Custom
+      uid: d58013fe-5d7d-48e9-9bde-298f9bcb6ed7
+      position: {x: 534.05005, y: -112.150024}
+      nodeUIDs:
+      - 
+      flowUIDs:
+      - 23a6bc36-a87c-48b8-aa5e-e6af39749c7c
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|questionbell
+    updateOrder: 0
+  graphElementData: []
+  viewTransform:
+    position: {x: -144, y: 199}
+    scale: 0.8695652
+  version: 1.0.0
+  showAssembly: 0
