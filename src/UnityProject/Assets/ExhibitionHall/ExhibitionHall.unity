@@ -6610,7 +6610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 450494, guid: d93be943d646d4b34844dd299ffa8f8e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 175
+      value: 625.625
       objectReference: {fileID: 0}
     - target: {fileID: 450494, guid: d93be943d646d4b34844dd299ffa8f8e, type: 3}
       propertyPath: m_LocalScale.z
@@ -7839,7 +7839,7 @@ Animator:
   m_GameObject: {fileID: 656605875}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb7070f02362fd2468eb7f29ef26bb91, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -11317,7 +11317,7 @@ Animator:
   m_GameObject: {fileID: 960885092}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb7070f02362fd2468eb7f29ef26bb91, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -13479,7 +13479,7 @@ Animator:
   m_GameObject: {fileID: 1218866957}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fb7070f02362fd2468eb7f29ef26bb91, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
