@@ -23,10 +23,10 @@ public class NextButton : UdonSharpBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        book1.gameObject.SetActive(false);
+/*        book1.gameObject.SetActive(false);
         book2.gameObject.SetActive(false);
         book3.gameObject.SetActive(false);
-        book4.gameObject.SetActive(false);
+        book4.gameObject.SetActive(false);*/
     }
 
     public void OnClick()
