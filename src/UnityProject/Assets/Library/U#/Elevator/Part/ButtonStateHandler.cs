@@ -18,6 +18,7 @@ public class ButtonStateHandler : MonoBehaviour {
 
     public void SetButtonState(bool isDown)
     {
+
         if(isDown)
         {
             _buttonDownDuration = 0;
