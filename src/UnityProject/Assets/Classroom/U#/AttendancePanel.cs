@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class AttendancePanel : UdonSharpBehaviour
 {
     public ClassroomData classData;
-    public StudentData studentData;
+    public StudentData studentData; 
     private void Start() {
         int len = classData.initialLize() + 1;
         studentData.initialize();
