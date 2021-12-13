@@ -20,7 +20,7 @@ public class bookreturn : UdonSharpBehaviour
     {
 
         string book = transform.parent.name;
-        RawImage b = GameObject.Find("/BorrowingBlock/Canvas/Menu/My/" + book).GetComponent<RawImage>();
+        RawImage b = GameObject.Find("/bookshelves/BorrowingBlock/Canvas/Menu/My/" + book).GetComponent<RawImage>();
         string which = "NonFiction";
         if(book == "fiction1"|| book == "fiction2" || book == "fiction3" || book == "fiction4")
         {
@@ -28,7 +28,7 @@ public class bookreturn : UdonSharpBehaviour
         }
         Debug.Log(which);
         b.gameObject.SetActive(false);
-        Text cnt = GameObject.Find("/BorrowingBlock/Canvas/Menu/" + which + "/" + book + "/Text").GetComponent<Text>();
+        Text cnt = GameObject.Find("/bookshelves/BorrowingBlock/Canvas/Menu/" + which + "/" + book + "/Text").GetComponent<Text>();
         if (cnt.text == "0")
         {
             cnt.text = "1";

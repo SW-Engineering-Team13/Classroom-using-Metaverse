@@ -41,9 +41,9 @@ public class NextButton : UdonSharpBehaviour
         Debug.Log(pages.GetType());
         for (int i = 1; i < 19; i += 2)
         {
-            Debug.Log("/ReadingBlock/Canvas/" + transform.parent.name + "/page" + i.ToString());
-            pages[i - 1] = GameObject.Find("/ReadingBlock/Canvas/" + transform.parent.name + "/page" + i.ToString()).GetComponent<RawImage>();
-            pages[i] = GameObject.Find("/ReadingBlock/Canvas/" + transform.parent.name + "/page" + (i + 1).ToString()).GetComponent<RawImage>();
+            Debug.Log("/bookshelves/ReadingBlock/Canvas/" + transform.parent.name + "/page" + i.ToString());
+            pages[i - 1] = GameObject.Find("/bookshelves/ReadingBlock/Canvas/" + transform.parent.name + "/page" + i.ToString()).GetComponent<RawImage>();
+            pages[i] = GameObject.Find("/bookshelves/ReadingBlock/Canvas/" + transform.parent.name + "/page" + (i + 1).ToString()).GetComponent<RawImage>();
             if (pages[i - 1].gameObject.activeSelf == true)
             {
                 now = i - 1;
@@ -62,8 +62,8 @@ public class NextButton : UdonSharpBehaviour
         {
             pages[now].gameObject.SetActive(false);
             pages[now + 1].gameObject.SetActive(false);
-            pages[now+2] = GameObject.Find("/ReadingBlock/Canvas/" + transform.parent.name + "/page" + (now+3).ToString()).GetComponent<RawImage>();
-            pages[now + 3] = GameObject.Find("/ReadingBlock/Canvas/" + transform.parent.name + "/page" + (now + 4).ToString()).GetComponent<RawImage>();
+            pages[now+2] = GameObject.Find("/bookshelves/ReadingBlock/Canvas/" + transform.parent.name + "/page" + (now+3).ToString()).GetComponent<RawImage>();
+            pages[now + 3] = GameObject.Find("/bookshelves/ReadingBlock/Canvas/" + transform.parent.name + "/page" + (now + 4).ToString()).GetComponent<RawImage>();
 
             pages[now + 2].gameObject.SetActive(true);
             pages[now + 3].gameObject.SetActive(true);
