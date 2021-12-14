@@ -14,16 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serializedUdonProgramAsset: {fileID: 11400000, guid: 195a7d78c94e0a748b6d2fa275ebf9a1,
     type: 2}
-  udonAssembly: ".data_start\r\n\r\n    \r\n    __Boolean_0: %SystemBoolean, null\r\n   
-    __instance_0: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    __instance_1:
-    %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    __instance_2: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer,
-    null\r\n    __instance_3: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n   
-    __instance_4: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    __url_0:
-    %VRCSDKBaseVRCUrl, null\r\n    __instance_5: %VRCSDK3ComponentsVRCUrlInputField,
+  udonAssembly: ".data_start\r\n\r\n    .export URLfield\r\n    \r\n    __Boolean_0:
+    %SystemBoolean, null\r\n    __instance_0: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer,
+    null\r\n    __instance_1: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n   
+    __instance_2: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    __instance_3:
+    %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    __instance_4: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer,
+    null\r\n    __url_0: %VRCSDKBaseVRCUrl, null\r\n    __instance_5: %VRCSDK3ComponentsVRCUrlInputField,
     null\r\n    __instance_6: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n   
-    VideoPlayer: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    URLfield:
-    %VRCSDK3ComponentsVRCUrlInputField, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n   
-    .export _custom\r\n    \r\n    _custom:\r\n    \r\n        PUSH, VideoPlayer\r\n       
+    __instance_7: %UnityEngineTransform, this\r\n    __type_0: %SystemType, null\r\n   
+    __Type_0: %SystemType, null\r\n    VideoPlayer: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer,
+    null\r\n    URLfield: %VRCSDK3ComponentsVRCUrlInputField, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n   
+    .export PlayPause\r\n    \r\n    PlayPause:\r\n    \r\n        PUSH, VideoPlayer\r\n       
     PUSH, __instance_0\r\n        COPY\r\n        PUSH, __instance_0\r\n        PUSH,
     __Boolean_0\r\n        EXTERN, \"VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__get_IsPlaying__SystemBoolean\"\r\n       
     PUSH, __Boolean_0\r\n        JUMP_IF_FALSE, 0x00000068\r\n        PUSH, VideoPlayer\r\n       
@@ -41,6 +42,10 @@ MonoBehaviour:
     JUMP, 0xFFFFFFFC\r\n    \r\n    .export _onVideoReady\r\n    \r\n    _onVideoReady:\r\n   
     \r\n        PUSH, VideoPlayer\r\n        PUSH, __instance_6\r\n        COPY\r\n       
     PUSH, __instance_6\r\n        EXTERN, \"VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__Play__SystemVoid\"\r\n       
+    JUMP, 0xFFFFFFFC\r\n    \r\n    .export _start\r\n    \r\n    _start:\r\n   
+    \r\n        PUSH, __Type_0\r\n        PUSH, __type_0\r\n        COPY\r\n       
+    PUSH, __instance_7\r\n        PUSH, __type_0\r\n        PUSH, VideoPlayer\r\n       
+    EXTERN, \"UnityEngineTransform.__GetComponent__SystemType__UnityEngineComponent\"\r\n       
     JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
   assemblyError: 
   graphData:
@@ -49,7 +54,7 @@ MonoBehaviour:
     nodes:
     - fullName: Variable_VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer
       uid: 1dcb1704-24fe-4cb1-8aae-ddcec3946ca4
-      position: {x: 0, y: 0}
+      position: {x: -676.5411, y: -132.4422}
       nodeUIDs:
       - 
       - 
@@ -72,7 +77,7 @@ MonoBehaviour:
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Variable_VRCSDK3ComponentsVRCUrlInputField
       uid: f93a07d1-5c6a-423c-ae60-77280acf643e
-      position: {x: 0, y: 0}
+      position: {x: -676.5411, y: -132.4422}
       nodeUIDs:
       - 
       - 
@@ -87,7 +92,7 @@ MonoBehaviour:
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|URLfield
       - unityObjectValue: {fileID: 0}
         stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
-          PublicKeyToken=b77a5c561934e089|False
+          PublicKeyToken=b77a5c561934e089|True
       - unityObjectValue: {fileID: 0}
         stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089|False
@@ -102,7 +107,7 @@ MonoBehaviour:
       - 8e4b6476-287d-4063-b99c-27633ba0ba7e
       nodeValues:
       - unityObjectValue: {fileID: 0}
-        stringValue: 
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|PlayPause
     - fullName: Branch
       uid: 8e4b6476-287d-4063-b99c-27633ba0ba7e
       position: {x: 629.1137, y: -77.96752}
@@ -265,10 +270,51 @@ MonoBehaviour:
       nodeValues:
       - unityObjectValue: {fileID: 0}
         stringValue: 
+    - fullName: Event_Start
+      uid: 40e6958e-c357-475f-935f-8389868d05b6
+      position: {x: 465.334, y: -578.09265}
+      nodeUIDs: []
+      flowUIDs:
+      - 8103e4e8-9293-4380-81e5-5051afd8bd92
+      nodeValues: []
+    - fullName: Set_Variable
+      uid: 8103e4e8-9293-4380-81e5-5051afd8bd92
+      position: {x: 647.334, y: -620.0926}
+      nodeUIDs:
+      - 
+      - 81af25ce-e9bb-4be7-93fb-53a61a8bb3bc|0
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|1dcb1704-24fe-4cb1-8aae-ddcec3946ca4
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089|False
+    - fullName: UnityEngineTransform.__GetComponent__SystemType__UnityEngineComponent
+      uid: 81af25ce-e9bb-4be7-93fb-53a61a8bb3bc
+      position: {x: 564.334, y: -419.09265}
+      nodeUIDs:
+      - 
+      - f4d58632-a655-4e4b-b28d-43b2558e230a|0
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Type_VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer
+      uid: f4d58632-a655-4e4b-b28d-43b2558e230a
+      position: {x: 557.334, y: -278.09262}
+      nodeUIDs: []
+      flowUIDs: []
+      nodeValues: []
     updateOrder: 0
   graphElementData: []
   viewTransform:
-    position: {x: 136.8, y: -76.8}
-    scale: 0.43232757
+    position: {x: 249.6, y: 209.6}
+    scale: 0.2
   version: 1.0.0
   showAssembly: 0
