@@ -17,6 +17,10 @@ public class FadeColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown("p")){
+            Debug.Log("random");
+            sr.material.color = new Color(90/255f, 142/255f, 72/255f);
+        }
         if(Input.GetKeyDown("r")){
             Debug.Log("red");
             sr.material.color = Color.red;
@@ -40,7 +44,11 @@ public class FadeColor : MonoBehaviour
         if(Input.GetKeyDown("c")){
             Debug.Log("c");
             sr.material.color = Color.cyan;
-        }    
+        } 
+        if(Input.GetKeyDown("w")){
+            Debug.Log("w");
+            sr.material.color = Color.white;
+        }       
         if(Input.GetKeyDown("k")){
             sr.material.color = Color.black; 
         }
