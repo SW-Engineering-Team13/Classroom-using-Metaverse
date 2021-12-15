@@ -22,7 +22,7 @@ public class bookborrow : UdonSharpBehaviour
     {
         string cnt = count.text;
         string book = transform.parent.name;
-        RawImage b = GameObject.Find("/bookshelves/BorrowingBlock/Canvas/Menu/My/" + book).GetComponent<RawImage>();
+        RawImage b = GameObject.Find("/Library/bookshelves/BorrowingBlock/Canvas/Menu/My/" + book).GetComponent<RawImage>();
 
         if (b.gameObject.activeSelf == false)
         {
