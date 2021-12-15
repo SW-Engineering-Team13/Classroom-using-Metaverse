@@ -10,9 +10,7 @@ using VRC.Udon;
 public class vote : UdonSharpBehaviour
 {
     [UdonSynced, FieldChangeCallback(nameof(SyncedNumber))] private int _syncedNumber = 0;
-
     public GameObject Vote;
-    public int counter = 0;
 
     public int SyncedNumber
     {
@@ -20,7 +18,7 @@ public class vote : UdonSharpBehaviour
         {
             Debug.Log("toggling the object...");
             _syncedNumber = value;
-            //do something()
+            Vote.GetComponent<Text>().text = _syncedNumber.ToString();
         }
         get => _syncedNumber;
     }
@@ -30,8 +28,5 @@ public class vote : UdonSharpBehaviour
         Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
         SyncedNumber++;
         RequestSerialization();
-
-        counter++;
-        Vote.GetComponent<Text>().text = counter.ToString();
     }
 }
