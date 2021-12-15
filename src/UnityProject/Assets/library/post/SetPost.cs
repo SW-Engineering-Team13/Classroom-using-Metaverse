@@ -32,7 +32,7 @@ public class SetPost : UdonSharpBehaviour
     {
         showposter = null;
         string which = inputField.text;
-        string where = "/post/Prefabs/SceneDescriptionBlock/Canvas/Panel/Poster";
+        string where = "/Library/post/Prefabs/SceneDescriptionBlock/Canvas/Panel/Poster";
         string name = inputField.name;
         if(name == "pathInputField1")
         {
